@@ -1,9 +1,10 @@
 import React from 'react'
 
 export default function DisplayLine({value, unit}) {
+  const valueDisplay = value || "--"
   return (
     <div>
-      <span>{value}</span><span>{unit}</span>
+      <span>{valueDisplay}</span><span>{unit}</span>
     </div>
   )
 }

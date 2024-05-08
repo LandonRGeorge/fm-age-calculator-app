@@ -1,13 +1,13 @@
 import React from 'react';
 import FormInput from './FormInput.jsx'
 
-export default function Form({handleFormChange}) {
+export default function Form({handleFormChange, inputs}) {
 
   return (
     <form>
-      <FormInput unit="day" placeholder="DD" handleChange={handleFormChange}/>
-      <FormInput unit="month" placeholder="MM" handleChange={handleFormChange}/>
-      <FormInput unit="year" placeholder="YYYY" handleChange={handleFormChange}/>
+      <FormInput input={inputs.year} unit="year" handleChange={handleFormChange}/>
+      <FormInput input={inputs.month} unit="month" handleChange={handleFormChange}/>
+      <FormInput input={inputs.day} unit="day" handleChange={handleFormChange}/>
     </form>
   )
 }
