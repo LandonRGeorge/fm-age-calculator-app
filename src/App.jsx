@@ -94,10 +94,10 @@ function App() {
 
 
   return (
-    <>
+    <div className="app">
       <Form handleFormChange={handleFormChange} inputs={inputs}/>
       <Display outputs={outputs}/>
-    </>
+    </div>
   )
 }
 

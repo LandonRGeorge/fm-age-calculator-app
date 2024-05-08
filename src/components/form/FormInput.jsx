@@ -11,10 +11,10 @@ const placeholders = {
 export default function FormInput({input, unit, placeholder, handleChange}) {
   const id = `${unit}-input`
   return (
-    <div>
-      <label htmlFor={id}>{unit}</label>
-      <input type="text" id={id} placeholder={placeholders[unit]} value={input.value ?? ""} onChange={e => handleChange(unit, e.target.value)}/>
-      {input.error}
+    <div className={`form-input ${input.error && "error"}`}>
+      <label className="form-input__label" htmlFor={id}>{unit}</label>
+      <input className="form-input__input" type="text" id={id} placeholder={placeholders[unit]} value={input.value ?? ""} onChange={e => handleChange(unit, e.target.value)}/>
+      <span className="form-input__error">{input.error}</span>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import DisplayLine from './DisplayLine'
 
 export default function Display({outputs}) {
   return (
-    <div>
+    <div className="display">
       <DisplayLine value={outputs.years} unit="years" />
       <DisplayLine value={outputs.months} unit="months" />
       <DisplayLine value={outputs.days} unit="days" />
